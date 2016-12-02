@@ -51,6 +51,7 @@ int removeData(){
 }
 
 int main() {
+    int k;
    /* chen 5 phan tu */
    insert(9);
 
@@ -68,16 +69,16 @@ int main() {
    // index : 0 1
    // ---------------------
    // queue : 9 12
-   printf("Hang doi : ");
-      while(!isEmpty()){
-      int n = removeData();
-      printf("%d  ",n);
-   }
+
    printf("\nSo hang doi MAX = %d\n",MAX);
 
    if(isFull()){
       printf("Hang doi (Queue) da day!\n");
    }
+   printf("\n");
+   printf("Hang doi : ");
+   for (k=front;k<=rear;k++)
+   printf("%d ",intArray[k]);
 
    // xoa mot phan tu
    int num = removeData();
@@ -100,7 +101,7 @@ int main() {
    // ----------------------
    // queue : 16 12
    // neu hang doi la day thi phan tu se bi de`
-   printf("\nneu hang doi la day thi phan tu se bi de` \n______________________________________\n");
+   printf("\nneu hang doi la day thi phan tu khong duoc them \n______________________________________\n");
    insert(17);
    insert(18);
    printf("Chen them 17 18\n");
