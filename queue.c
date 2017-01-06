@@ -30,9 +30,9 @@ void insert(int data){
 
    if(!isFull()){
 
-      if(rear == MAX-1){
+      if(rear == MAX-1)
          rear = -1;
-      }
+      
 
       intArray[++rear] = data;
       itemCount++;
@@ -42,9 +42,9 @@ void insert(int data){
 int removeData(){
    int data = intArray[front++];
 
-   if(front == MAX){
+   if(front == MAX)
       front = 0;
-   }
+   
 
    itemCount--;
    return data;
@@ -72,9 +72,9 @@ int main() {
 
    printf("\nSo hang doi MAX = %d\n",MAX);
 
-   if(isFull()){
+   if(isFull())
       printf("Hang doi (Queue) da day!\n");
-   }
+   
    printf("\n");
    printf("Hang doi : ");
    for (k=front;k<=rear;k++)
